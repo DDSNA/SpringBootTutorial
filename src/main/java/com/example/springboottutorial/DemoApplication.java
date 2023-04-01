@@ -15,4 +15,8 @@ public class DemoApplication {
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
         return String.format("Hello %s!", name);
     }
+    @GetMapping("/APItest")
+    public String apitest(@RequestParam(value = "apiname", defaultValue = "API Name 1") String apiname) {
+        return String.format("Hi! I am an api designed by Dan and you can call me %s", apiname);
+    }
 }
